@@ -38,31 +38,38 @@ tagList(dashboardPage(
         tabItems(
             tabItem(
                 tabName = "summary",
-                
+                fluidRow(
+                    box(width = 12, tags$b("Indicadores para el seguimiento de la actividad turística en el marco de los Objetivos de Desarrollo Sostenible (ODS) ")))
+                ,
+                fluidRow(
+                    box(width = 12, tags$b("Impacto económico y empleo")))
+                ,
                 fluidRow(
                     valueBox(tags$p(style = "font-size: 160%;", cst_empleo),
                              tags$p(style = "font-size: 140%;", "Puestos de trabajo en industrias turísticas (2019)"), 
-                             icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy"),
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", empleo_informal),
                              tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo turístico (2019)"), 
-                             icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy"),
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", cst_pibdt),
                              tags$p(style = "font-size: 140%;", "PIB turístico respecto del PIB total (2019)"), 
-                             icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy")),
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "navy")),
+                fluidRow(
+                    box(width = 12, tags$b("Acceso al turismo y desigualdad"))),
                 fluidRow(
                     valueBox(tags$p(style = "font-size: 160%;", propension),
                              tags$p(style = "font-size: 140%;", "Propensión a viajar (2022)"), 
-                             icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy"),
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"),
                     valueBox(tags$p(style = "font-size: 160%;", gini_viajes),
                              tags$p(style = "font-size: 140%;", "Índice de Gini de viajes turísticos (2022)"), 
-                             icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy"),
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"),
                     valueBox(tags$p(style = "font-size: 160%;", gini_viajes_ocio),
                              tags$p(style = "font-size: 140%;", "Índice de Gini de viajes turísticos de ocio (2022)"), 
-                             icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy")
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "aqua")
                 ),
                 fluidRow(valueBox(tags$p(style = "font-size: 160%;", gini_gasto),
                                   tags$p(style = "font-size: 140%;", "Índice de Gini del gasto turístico (2022)"), 
-                                  icon = icon("glyphicon glyphicon-user", verify_fa = FALSE), width = 4, color = "navy"))
+                                  icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"))
                         )
                         
                     )
