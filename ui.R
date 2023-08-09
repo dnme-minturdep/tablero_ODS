@@ -7,8 +7,6 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
-
 tagList(dashboardPage(
     
     dashboardHeader(title = "Indicadores ODS", titleWidth = 250,
@@ -70,8 +68,34 @@ tagList(dashboardPage(
                 fluidRow(valueBox(tags$p(style = "font-size: 160%;", gini_gasto),
                                   tags$p(style = "font-size: 140%;", "Índice de Gini del gasto turístico (2022)"), 
                                   icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"))
-                        )
-                        
-                    )
-                )),
+                        ),
+            tabItem(
+                tabName = "series",
+                
+                fluidRow(
+                    box(width = 12, tags$p(style = "text-align: center; font-size: 20px;","Series de tiempo de los indicadores ODS"))
+                ),
+                fluidRow(
+                    box(width = 4, status = "primary", solidHeader = TRUE,
+                                      title = "Puestos de trabajo en industrias turísticas (millones)", plotlyOutput("graph_cst_empleo", height = 200)),
+                    box(width = 4, status = "primary", solidHeader = TRUE,
+                                      title = "Tasa de informalidad del empleo turístico (%)", plotlyOutput("informalidad_empleo", height = 200)),
+                    box(width = 4, status = "primary", solidHeader = TRUE,
+                        title = "PIB directo turístico respecto del PIB total (%)", plotlyOutput("graph_pibdt", height = 200))
+                ),
+                fluidRow(
+                    box(width = 4, status = "primary", solidHeader = TRUE,
+                        title = "Propensión a viajar (%)", plotlyOutput("graph_propension", height = 200)),
+                    box(width = 4, status = "primary", solidHeader = TRUE,
+                        title = "Índice de Gini de viajes turísticos", plotlyOutput("graph_gini_viajes", height = 200)),
+                   box(width = 4, status = "primary", solidHeader = TRUE,
+                    title = "Índice de Gini de viajes turísticos de ocio", plotlyOutput("graph_gini_viajes_ocio", height = 200))
+                ),
+                fluidRow(
+                    box(width = 4, status = "primary", solidHeader = TRUE,
+                        title = "Índice de Gini del gasto turístico", plotlyOutput("graph_gini_gasto", height = 200)))
+                )
+            )
+        )
+    ),
     tags$footer(includeHTML("/srv/shiny-server/recursos/shiny_footer.html")))

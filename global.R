@@ -1,8 +1,10 @@
+library(shiny)
 library(tidyverse)
 library(shinydashboard)
 library(shinyjs)
 library(waiter)
 library(herramientas)
+library(plotly)
 # Procesamiento de los datos que toman los indicadores 
 
 # Datos de CST para puestos de trabajo y PIBDT
@@ -191,3 +193,5 @@ gini_gasto <- gini_anual_gasto %>%
 #   h3("Cargando...", style = "color:gray;"),
 #   img(src = "https://tableros.yvera.tur.ar/recursos/logo_mintur_color.png", height = "200px")
 # )
+
+
