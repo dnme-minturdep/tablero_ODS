@@ -88,7 +88,7 @@ shinyServer(function(input, output) {
                                 text = paste0('Año: ', indice_tiempo,
                                               '<br>Participación: ',format(round(participacion*100,2),big.mark=".",
                                                                    decimal.mark = ","),"%")))+
-                     geom_col(fill = "#50B8B1")+
+                     geom_col(fill = "#00c0ef")+
                      #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
                      scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
                      theme_minimal()+
@@ -111,8 +111,8 @@ shinyServer(function(input, output) {
                                 text = paste0('Año: ', anio,
                                               '<br>Valor: ',format(round(indice*100,2),big.mark=".",
                                                                            decimal.mark = ","))))+
-                     geom_point(color = "#50B8B1")+
-                     geom_line(color = "#50B8B1")+
+                     geom_point(color = "#00c0ef")+
+                     geom_line(color = "#00c0ef")+
                      #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
                      scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
                      theme_minimal()+
@@ -135,8 +135,8 @@ shinyServer(function(input, output) {
                                 text = paste0('Año: ', anio,
                                               '<br>Valor: ',format(round(indice*100,2),big.mark=".",
                                                                    decimal.mark = ","))))+
-                     geom_point(color = "#50B8B1")+
-                     geom_line(color = "#50B8B1")+
+                     geom_point(color = "#00c0ef")+
+                     geom_line(color = "#00c0ef")+
                      #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
                      scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
                      theme_minimal()+
@@ -159,8 +159,8 @@ shinyServer(function(input, output) {
                                 text = paste0('Año: ', anio,
                                               '<br>Valor: ',format(round(indice*100,2),big.mark=".",
                                                                    decimal.mark = ","))))+
-                     geom_point(color = "#50B8B1")+
-                     geom_line(color = "#50B8B1")+
+                     geom_point(color = "#00c0ef")+
+                     geom_line(color = "#00c0ef")+
                      #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
                      scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
                      theme_minimal()+

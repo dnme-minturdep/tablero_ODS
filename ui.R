@@ -55,20 +55,22 @@ tagList(dashboardPage(
                 fluidRow(
                     box(width = 12, tags$b("Acceso al turismo y desigualdad"))),
                 fluidRow(
-                    valueBox(tags$p(style = "font-size: 160%;", propension),
-                             tags$p(style = "font-size: 140%;", "Propensión a viajar (2022)"), 
-                             icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"),
-                    valueBox(tags$p(style = "font-size: 160%;", gini_viajes),
-                             tags$p(style = "font-size: 140%;", "Índice de Gini de viajes turísticos (2022)"), 
-                             icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"),
-                    valueBox(tags$p(style = "font-size: 160%;", gini_viajes_ocio),
-                             tags$p(style = "font-size: 140%;", "Índice de Gini de viajes turísticos de ocio (2022)"), 
-                             icon = icon("", verify_fa = FALSE), width = 4, color = "aqua")
-                ),
-                fluidRow(valueBox(tags$p(style = "font-size: 160%;", gini_gasto),
-                                  tags$p(style = "font-size: 140%;", "Índice de Gini del gasto turístico (2022)"), 
-                                  icon = icon("", verify_fa = FALSE), width = 4, color = "aqua"))
-                        ),
+                    valueBox(tags$p(style = "font-size: 250%;", propension),
+                             tags$p(style = "font-size: 110%;", "Propensión a viajar (2022)"), 
+                             icon = icon("", verify_fa = FALSE), width = 4, color = "red"),
+                    column(width=4,
+                           column(width=12,
+                                  valueBox(tags$p(style = "font-size: 90%;", gini_viajes),
+                                           tags$p(style = "font-size: 120%;", "Índice de Gini de viajes turísticos (2022)"),
+                                           icon = icon("", verify_fa = FALSE),width=NULL, color = "aqua"),
+                             valueBox(tags$p(style = "font-size: 90%;", gini_viajes_ocio),
+                                      tags$p(style = "font-size: 120%;", "Índice de Gini de viajes turísticos de ocio (2022)"),
+                                      icon = icon("", verify_fa = FALSE),width=NULL, color = "aqua"))),
+                    valueBox(tags$p(style = "font-size: 90%;", gini_gasto),
+                                      tags$p(style = "font-size: 120%;", "Índice de Gini del gasto turístico (2022)"), 
+                                      icon = icon("", verify_fa = FALSE), width = 4, color = "aqua")
+                             )
+                           ),
             tabItem(
                 tabName = "series",
                 

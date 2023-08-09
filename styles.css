@@ -59,6 +59,16 @@
   font-family: 'Encode Sans Normal', Helvetica;
 }
 
+.small-box.bg-red {
+  height: 220px;
+  background-color: #00c0ef !important;
+  font-family: 'Encode Sans Normal', Helvetica;
+}
+.small-box.bg-aqua {
+  height: 110px;
+  background-color: #00c0ef !important;
+  font-family: 'Encode Sans Normal', Helvetica;
+}
 /* logo */
 .skin-blue .main-header .logo {
   background-color: #37BBED;
@@ -109,7 +119,7 @@
  
  /*boxes*/
  .skin-blue .box-header {
-  font-family: 'Encode Sans Normal', Helvetica;
+    font-family: 'Encode Sans Normal', Helvetica;
 }
 
 
