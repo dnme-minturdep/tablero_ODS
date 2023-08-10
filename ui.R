@@ -45,10 +45,10 @@ tagList(dashboardPage(
                 ,
                 fluidRow(
                     valueBox(tags$p(style = "font-size: 160%;", cst_empleo),
-                             tags$p(style = "font-size: 140%;", "Puestos de trabajo en industrias turísticas (2019)"), 
-                             icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
+                             tags$p(style = "font-size: 140%;", "Puestos de trabajo en industrias turísticas (2019)"),
+                                    icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", empleo_informal),
-                             tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo turístico (2019)"), 
+                             tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo turístico (2019)"),
                              icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", cst_pibdt),
                              tags$p(style = "font-size: 140%;", "PIB turístico respecto del PIB total (2019)"), 
