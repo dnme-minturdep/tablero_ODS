@@ -105,41 +105,19 @@ shinyServer(function(input, output) {
                           caption =  "**Fuente**: Encuesta de Viajes y Turismo de los Hogares (EVyTH)" ),
                  tooltip = "text")
     )
-    output$graph_gini_viajes <- renderPlotly(
-        ggplotly(gini_anual %>% 
-                     ggplot(aes(x=as.character(anio),y=indice, group=1,
-                                text = paste0('Año: ', anio,
-                                              '<br>Valor: ',format(round(indice*100,2),big.mark=".",
-                                                                           decimal.mark = ","))))+
-                     geom_point(color = "#00c0ef")+
-                     geom_line(color = "#00c0ef")+
-                     #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
-                     scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
-                     theme_minimal()+
-                     theme(legend.position = "bottom", 
-                           axis.text.x =element_text (size =9, angle = 40, vjust = 0.5),
-                           axis.text.y = element_text(size = 12),
-                           legend.text = element_text (size =10),
-                           plot.caption = ggtext::element_markdown()) +
-                     labs(y = "", 
-                          x = "", 
-                          color= "",
-                          fill="",title = "",
-                          subtitle = "",
-                          caption =  "**Fuente**: Encuesta de Viajes y Turismo de los Hogares (EVyTH)" ),
-                 tooltip = "text")
-    )
-    output$graph_gini_viajes_ocio <- renderPlotly(
-        ggplotly(gini_anual_ocio %>% 
-                     ggplot(aes(x=as.character(anio),y=indice, group=1,
+    output$graph_gini_todos <- renderPlotly(
+        ggplotly(gini_todos %>% 
+                     ggplot(aes(x=as.character(anio),y=indice, group=indicador,
+                                color=indicador,
                                 text = paste0('Año: ', anio,
                                               '<br>Valor: ',format(round(indice*100,2),big.mark=".",
                                                                    decimal.mark = ","))))+
-                     geom_point(color = "#00c0ef")+
-                     geom_line(color = "#00c0ef")+
+                     geom_point()+
+                     geom_line()+
                      #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
                      scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
                      theme_minimal()+
+                     comunicacion::scale_color_dnmye()+
                      theme(legend.position = "bottom", 
                            axis.text.x =element_text (size =9, angle = 40, vjust = 0.5),
                            axis.text.y = element_text(size = 12),
@@ -151,33 +129,12 @@ shinyServer(function(input, output) {
                           fill="",title = "",
                           subtitle = "",
                           caption =  "**Fuente**: Encuesta de Viajes y Turismo de los Hogares (EVyTH)" ),
-                 tooltip = "text")
-    )
-    output$graph_gini_gasto <- renderPlotly(
-        ggplotly(gini_anual_gasto %>% 
-                     ggplot(aes(x=as.character(anio),y=indice, group=1,
-                                text = paste0('Año: ', anio,
-                                              '<br>Valor: ',format(round(indice*100,2),big.mark=".",
-                                                                   decimal.mark = ","))))+
-                     geom_point(color = "#00c0ef")+
-                     geom_line(color = "#00c0ef")+
-                     #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
-                     scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
-                     theme_minimal()+
-                     theme(legend.position = "bottom", 
-                           axis.text.x =element_text (size =9, angle = 40, vjust = 0.5),
-                           axis.text.y = element_text(size = 12),
-                           legend.text = element_text (size =10),
-                           plot.caption = ggtext::element_markdown()) +
-                     labs(y = "", 
-                          x = "", 
-                          color= "",
-                          fill="",title = "",
-                          subtitle = "",
-                          caption =  "**Fuente**: Encuesta de Viajes y Turismo de los Hogares (EVyTH)" ),
-                 tooltip = "text")
-    )
-    
-    })
+                 tooltip = "text") %>% 
+            layout(legend = list(
+                orientation = "h",
+                x = -0.5, y =-1)
+            )
+            )
+        })
 
 

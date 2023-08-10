@@ -91,13 +91,7 @@ tagList(dashboardPage(
                     box(width = 4, status = "primary", solidHeader = TRUE,
                         title = "Propensión a viajar (%)", plotlyOutput("graph_propension", height = 200)),
                     box(width = 4, status = "primary", solidHeader = TRUE,
-                        title = "Índice de Gini de viajes turísticos", plotlyOutput("graph_gini_viajes", height = 200)),
-                   box(width = 4, status = "primary", solidHeader = TRUE,
-                    title = "Índice de Gini de viajes turísticos de ocio", plotlyOutput("graph_gini_viajes_ocio", height = 200))
-                ),
-                fluidRow(
-                    box(width = 4, status = "primary", solidHeader = TRUE,
-                        title = "Índice de Gini del gasto turístico", plotlyOutput("graph_gini_gasto", height = 200)))
+                        title = "Índices de Gini", plotlyOutput("graph_gini_todos", height = 200)))
                 ),
             ####METODOLOGÍA#####
             tabItem(

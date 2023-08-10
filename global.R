@@ -194,4 +194,39 @@ gini_gasto <- gini_anual_gasto %>%
 #   img(src = "https://tableros.yvera.tur.ar/recursos/logo_mintur_color.png", height = "200px")
 # )
 
+gini_todos <- gini_anual %>% 
+  mutate(indicador = "Viajes totales") %>% 
+  bind_rows(gini_anual_ocio %>% 
+              mutate(indicador = "Viajes de Ocio")) %>% 
+  bind_rows(gini_anual_gasto %>% 
+              mutate(indicador ="Gasto turístico"))
 
+ggplotly(gini_todos %>% 
+           ggplot(aes(x=as.character(anio),y=indice, group=indicador,
+                      color=indicador,
+                      text = paste0('Año: ', anio,
+                                    '<br>Valor: ',format(round(indice*100,2),big.mark=".",
+                                                         decimal.mark = ","))))+
+           geom_point()+
+           geom_line()+
+           #geom_label(aes(label = scales::label_number(decimal.mark = ",",big.mark = ".", accuracy =1 )(round(valor/100,1))), size = 2.5)+
+           scale_y_continuous(limits=c(0,NA),labels = scales::percent_format( decimal.mark = ",")) + 
+           theme_minimal()+
+           comunicacion::scale_color_dnmye()+
+           theme(legend.position = "bottom", 
+                 axis.text.x =element_text (size =9, angle = 40, vjust = 0.5),
+                 axis.text.y = element_text(size = 12),
+                 legend.text = element_text (size =10),
+                 plot.caption = ggtext::element_markdown()) +
+           labs(y = "", 
+                x = "", 
+                color= "",
+                fill="",title = "",
+                subtitle = "",
+                caption =  "**Fuente**: Encuesta de Viajes y Turismo de los Hogares (EVyTH)" ),
+         tooltip = "text") %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = -0.5, y =-1
+  )
+  )
