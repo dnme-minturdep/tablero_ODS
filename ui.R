@@ -127,7 +127,7 @@ tagList(dashboardPage(
                                         tags$p(tags$b(" • Propensión a viajar "),": Proporción de la población que realizó al menos un viaje con pernocte durante el año de referencia"),
                                         tags$p(tags$b(" • Índice de Gini de viajes turísticos "),": Medida de desigualdad habitual, aplicada a la cantidad total de viajes turísticos 
                                                realizados según quintil de ingresos de los hogares"),
-                                        tags$p(tags$b(" • Índice de Gini de viajes turísticos "),": El indicador, en este caso, tiene en cuenta únicamente los viajes con motivo de 'esparcimiento, ocio y recreación',
+                                        tags$p(tags$b(" • Índice de Gini de viajes turísticos de ocio "),": El indicador, en este caso, tiene en cuenta únicamente los viajes con motivo de 'esparcimiento, ocio y recreación',
                                                excluyéndose aquellos relacionados con la visita a familiares y amigos; trabajo, negocios, motivos profesionales; y otros."),
                                         tags$p(tags$b(" • Índice de Gini del gasto turístico "),": Medida de desigualdad aplicada al gasto que los hogares tuvieron en el viaje, según quintil 
                                                de ingresos de los hogares.")))
