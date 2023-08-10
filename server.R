@@ -132,7 +132,7 @@ shinyServer(function(input, output) {
                 tooltip = "text") %>% 
             layout(legend = list(
                 orientation = "h",
-                x = -0.5, y =-1)
+                x = 0.5, y =-1)
             )
             )
 

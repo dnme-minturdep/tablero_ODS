@@ -38,10 +38,10 @@ tagList(dashboardPage(
             tabItem(
                 tabName = "summary",
                 fluidRow(
-                    box(width = 12, tags$b("Indicadores para el seguimiento de la actividad turística en el marco de los Objetivos de Desarrollo Sostenible (ODS) ")))
+                    h4(tags$b("Indicadores para el seguimiento de la actividad turística en el marco de los Objetivos de Desarrollo Sostenible (ODS) ")))
                 ,
                 fluidRow(
-                    box(width = 12, tags$b("Impacto económico y empleo")))
+                    h4(tags$b("Impacto económico y empleo")))
                 ,
                 fluidRow(
                     valueBox(tags$p(style = "font-size: 160%;", cst_empleo),
@@ -54,7 +54,7 @@ tagList(dashboardPage(
                              tags$p(style = "font-size: 140%;", "PIB turístico respecto del PIB total (2019)"), 
                              icon = icon("", verify_fa = FALSE), width = 4, color = "navy")),
                 fluidRow(
-                    box(width = 12, tags$b("Acceso al turismo y desigualdad"))),
+                    h4( tags$b("Acceso al turismo y desigualdad"))),
                 fluidRow(
                     valueBox(tags$p(style = "font-size: 250%;", propension),
                              tags$p(style = "font-size: 110%;", "Propensión a viajar (2022)"), 
@@ -90,7 +90,7 @@ tagList(dashboardPage(
                 fluidRow(
                     box(width = 4, status = "primary", solidHeader = TRUE,
                         title = "Propensión a viajar (%)", plotlyOutput("graph_propension", height = 200)),
-                    box(width = 4, status = "primary", solidHeader = TRUE,
+                    box(width = 8, status = "primary", solidHeader = TRUE,
                         title = "Índices de Gini", plotlyOutput("graph_gini_todos", height = 200)))
                 ),
             ####METODOLOGÍA#####
