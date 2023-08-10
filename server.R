@@ -129,12 +129,13 @@ shinyServer(function(input, output) {
                           fill="",title = "",
                           subtitle = "",
                           caption =  "**Fuente**: Encuesta de Viajes y Turismo de los Hogares (EVyTH)" ),
-                tooltip = "text") %>% 
+                tooltip = "text")# %>% 
             # layout(legend = list(
             #     orientation = "h",
             #     x = -0.5, y =-1)
+            #)
             )
-            )
+
         })
 
 
