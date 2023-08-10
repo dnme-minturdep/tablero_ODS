@@ -5,6 +5,7 @@ library(shinyjs)
 library(waiter)
 library(herramientas)
 library(plotly)
+library(comunicacion)
 # Procesamiento de los datos que toman los indicadores 
 
 # Datos de CST para puestos de trabajo y PIBDT
