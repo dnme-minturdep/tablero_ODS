@@ -54,19 +54,13 @@
 }
 
 .small-box.bg-red {
-  height: 100px;
-  background-color: #3D9970 !important;
-  font-family: 'Encode Sans Normal', Helvetica;
-}
-
-.small-box.bg-red {
-  height: 220px;
+  height: 240px !important;
   background-color: #00c0ef !important;
   font-family: 'Encode Sans Normal', Helvetica;
 }
 .small-box.bg-aqua {
   height: 110px;
-  background-color: #00c0ef !important;
+ background-color: #00c0ef !important;
   font-family: 'Encode Sans Normal', Helvetica;
 }
 /* logo */

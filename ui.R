@@ -63,10 +63,10 @@ tagList(dashboardPage(
                            column(width=12,
                                   valueBox(tags$p(style = "font-size: 90%;", gini_viajes),
                                            tags$p(style = "font-size: 120%;", "Índice de Gini de viajes turísticos (2022)"),
-                                           icon = icon("", verify_fa = FALSE),width=20, color = "aqua"),
+                                           icon = icon("", verify_fa = FALSE),width=NULL, color = "aqua"),
                                   valueBox(tags$p(style = "font-size: 90%;", gini_viajes_ocio),
                                       tags$p(style = "font-size: 120%;", "Índice de Gini de viajes turísticos de ocio (2022)"),
-                                      icon = icon("", verify_fa = FALSE),width=20, color = "aqua"))),
+                                      icon = icon("", verify_fa = FALSE),width=NULL, color = "aqua"))),
                     valueBox(tags$p(style = "font-size: 90%;", gini_gasto),
                                       tags$p(style = "font-size: 120%;", "Índice de Gini del gasto turístico (2022)"), 
                                       icon = icon("", verify_fa = FALSE), width = 4, color = "aqua")
