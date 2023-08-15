@@ -122,7 +122,9 @@
     font-family: 'Encode Sans Normal', Helvetica;
 }
 
-
+.box.box-solid.box-primary>.box-header {
+  background:#37BBED
+                    }
 .footer {
   font-family: 'Encode Sans Normal', Helvetica;
   font-size: 1.5rem;

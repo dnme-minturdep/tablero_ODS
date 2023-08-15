@@ -56,17 +56,17 @@ tagList(dashboardPage(
                 fluidRow(
                     h4( tags$b("Acceso al turismo y desigualdad"))),
                 fluidRow(
-                    valueBox(tags$p(style = "font-size: 250%;", propension),
+                    valueBox(tags$p(style = "font-size: 240%;", propension),
                              tags$p(style = "font-size: 110%;", "Propensión a viajar (2022)"), 
                              icon = icon("", verify_fa = FALSE), width = 4, color = "red"),
                     column(width=4,
                            column(width=12,
                                   valueBox(tags$p(style = "font-size: 90%;", gini_viajes),
                                            tags$p(style = "font-size: 120%;", "Índice de Gini de viajes turísticos (2022)"),
-                                           icon = icon("", verify_fa = FALSE),width=NULL, color = "aqua"),
-                             valueBox(tags$p(style = "font-size: 90%;", gini_viajes_ocio),
+                                           icon = icon("", verify_fa = FALSE),width=20, color = "aqua"),
+                                  valueBox(tags$p(style = "font-size: 90%;", gini_viajes_ocio),
                                       tags$p(style = "font-size: 120%;", "Índice de Gini de viajes turísticos de ocio (2022)"),
-                                      icon = icon("", verify_fa = FALSE),width=NULL, color = "aqua"))),
+                                      icon = icon("", verify_fa = FALSE),width=20, color = "aqua"))),
                     valueBox(tags$p(style = "font-size: 90%;", gini_gasto),
                                       tags$p(style = "font-size: 120%;", "Índice de Gini del gasto turístico (2022)"), 
                                       icon = icon("", verify_fa = FALSE), width = 4, color = "aqua")
@@ -101,14 +101,14 @@ tagList(dashboardPage(
                          
                         box(width = NULL,status = "primary", solidHeader = TRUE,
                              br(),
-                            tags$b(style ="text-align: center; font-size: 24px;color:#37BBED;",'Definiciones y conceptos'),
+                            tags$b(style ="text-align: center; font-size: 20px;color:#37BBED;",'Definiciones y conceptos'),
                              br(),
-                             h4("El tablero presenta un conjunto de indicadores que buscan reflejar el aporte del 
-                                turismo a los Objetivos de Desarrollo Sostenible (ODS) para nuestro país. El Documento de Trabaj 
-                                N°X aborda esta propuesta y describe en detalle las fuentas utilizadas y los indicadores elaborados"), 
-                            tags$b(style ="text-align: center; font-size: 20px;color:#37BBED;",'Fuentes de información'),
+                             tags$p(style = "font-size=14px","El tablero presenta un conjunto de indicadores que buscan reflejar el aporte del 
+                                turismo a los Objetivos de Desarrollo Sostenible (ODS) para nuestro país. El Documento de Trabajo 
+                                N°12: El turismo en los Objetivos de Desarrollo Sostenible aborda esta propuesta y describe en detalle las fuentas utilizadas y los indicadores elaborados"), 
+                            tags$b(style = "font-size=14px", style ="text-align: center; font-size: 20px;color:#37BBED;",'Fuentes de información'),
                              br(),
-                             h4("Los indicadores que reflejan el aporte del turismo a la economía en su conjunto en términos de actividad 
+                             tags$p(style = "font-size=14px","Los indicadores que reflejan el aporte del turismo a la economía en su conjunto en términos de actividad 
                                 económica y empleo, y la tasa de informalidad de éste, provienen de la ",
                                 tags$a(href="https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo", target = '_blank', "Cuenta Satélite de Turismo de Argentina (CST-A)"), 
                                 ", publicada en febrero de 2022. El resto de los indicadores, que buscan medir el acceso al turismo y su nivel de desigualdad,
@@ -116,20 +116,20 @@ tagList(dashboardPage(
                                                                              representativa de los grandes aglomerados del país.")),
                             tags$b(style ="text-align: center; font-size: 20px;color:#37BBED;",'Indicadores'),
                              br(),
-                             h4(tags$ul(tags$p(tags$b(" • Puestos de trabajo en industrias turísticas"),
+                             tags$p(style = "font-size=14px",tags$ul(tags$p(tags$b(" • Puestos de trabajo en industrias turísticas"),style = "font-size=14px",
                                                ": Surge de la suma de los puestos de trabajo existentes en
                                                los establecimientos pertenecientes a las ramas de actividad clasificadas como características del turismo. 
                                                Incluye puestos de trabajo asalariados (registrados y no registrados) y no asalariados."),
-                                        tags$p(tags$b(" • Tasa de informalidad en el empleo turístico"),": Proporción de puestos de trabajo asalariados no registrados
+                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • Tasa de informalidad en el empleo turístico"),": Proporción de puestos de trabajo asalariados no registrados
                                                con respecto al total de puestos de trabajo asalariados, en porcentaje, para ramas características del turismo."),
-                                        tags$p(tags$b(" • PIB turístico respecto del PIB total"),": la parte del PIB de la economía total atribuible directamente
-                                        al consumo turístico realizado dentro de la Argentina, ya sea por visitantes residentes o no residentes, como porcentaje del PIB total"),
-                                        tags$p(tags$b(" • Propensión a viajar "),": Proporción de la población que realizó al menos un viaje con pernocte durante el año de referencia"),
-                                        tags$p(tags$b(" • Índice de Gini de viajes turísticos "),": Medida de desigualdad habitual, aplicada a la cantidad total de viajes turísticos 
-                                               realizados según quintil de ingresos de los hogares"),
-                                        tags$p(tags$b(" • Índice de Gini de viajes turísticos de ocio "),": El indicador, en este caso, tiene en cuenta únicamente los viajes con motivo de 'esparcimiento, ocio y recreación',
+                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • PIB turístico respecto del PIB total"),": la parte del PIB de la economía total atribuible directamente
+                                        al consumo turístico realizado dentro de la Argentina, ya sea por visitantes residentes o no residentes, como porcentaje del PIB total."),
+                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • Propensión a viajar "),": Proporción de la población que realizó al menos un viaje con pernocte durante el año de referencia."),
+                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • Índice de Gini de viajes turísticos "),": Medida de desigualdad habitual, aplicada a la cantidad total de viajes turísticos 
+                                               realizados según quintil de ingresos de los hogares. Valores más cercanos a 0 implican mayor igualdad, mientras que valores más próximos a 100 reflejan una mayor desigualdad en la distribución de los viajes turísticos según ingresos de la población."),
+                                        tags$p(style = "font-size=14px",tags$b(" • Índice de Gini de viajes turísticos de ocio "),": El indicador, en este caso, tiene en cuenta únicamente los viajes con motivo de 'esparcimiento, ocio y recreación',
                                                excluyéndose aquellos relacionados con la visita a familiares y amigos; trabajo, negocios, motivos profesionales; y otros."),
-                                        tags$p(tags$b(" • Índice de Gini del gasto turístico "),": Medida de desigualdad aplicada al gasto que los hogares tuvieron en el viaje, según quintil 
+                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • Índice de Gini del gasto turístico "),": Medida de desigualdad aplicada al gasto que los hogares tuvieron en el viaje, según quintil 
                                                de ingresos de los hogares.")))
                          )
                 )
