@@ -32,17 +32,17 @@ cst_empleo <- paste0(format(round(cst[cst$indicador == "Puestos de trabajo en la
 
 
 #Datos de informalidad MOMENTÁNEAMENTE MANUALES
-empleo_cat <- data.frame(anio = c(2004,2016:2019),
-                         puestos_reg = c(346.060135700089,
-                                         557.7,
-                                         559.1,
-                                         554.6,
-                                         538.9),
-                         puestos_noreg = c(330.3,
-                                           360.0,
-                                           381.9,
-                                           397.2,
-                                           376.1)) %>% 
+
+cst_empleo_excel <- readxl::read_excel(temp,skip = 7,sheet=3) %>% 
+  janitor::clean_names() %>% 
+  mutate(puestos_reg=as.numeric(asalariados_registrados),
+         puestos_noreg = as.numeric(asalariados_no_registrados)) %>% 
+  filter(!is.na(puestos_reg) & industrias_turisticas == "Total Industrias turísticas") %>% 
+  select(industrias_turisticas,puestos_reg,puestos_noreg) %>% 
+  mutate(anio = c(2004,2016:2019)) 
+
+empleo_cat <- cst_empleo_excel  %>% 
+  select(anio,puestos_reg,puestos_noreg) %>% 
   mutate(asal_total = puestos_reg+puestos_noreg,
          tasa_informal = puestos_noreg/(asal_total))
 
