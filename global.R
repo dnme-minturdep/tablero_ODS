@@ -9,7 +9,7 @@ library(comunicacion)
 # Procesamiento de los datos que toman los indicadores 
 
 # Datos de CST para puestos de trabajo y PIBDT
-cst_url <- "https://www.yvera.tur.ar/sinta/informe/documentos/descarga/61fb3d633360f945528936.xlsx"
+cst_url <- "https://www.yvera.tur.ar/sinta/informe/documentos/descarga/6553c4d345bbf461829270.xlsx"
 
 temp <- tempfile()
 
@@ -17,14 +17,14 @@ con <- RCurl::getBinaryURL(url = cst_url,  ssl.verifypeer = FALSE)
 
 writeBin(con, con = temp)
 
-cst_excel <- readxl::read_excel(temp,skip = 5)
+cst_excel <- readxl::read_excel(temp,skip = 6)
 
 
 cst <- cst_excel %>% 
   janitor::clean_names() %>% 
   rename("indicador" = indicadores_turisticos_en_percent_sobre_el_total) %>% 
   filter(indicador %in% c("Puestos de trabajo en las industrias turísticas  (en miles)","Producto bruto interno directo turístico (PBIDT)")) %>% 
-  pivot_longer(cols = 2:6,names_to = "anio",values_to = "valor") %>% 
+  pivot_longer(cols = 2:9,names_to = "anio",values_to = "valor") %>% 
   mutate(anio = str_replace(anio,"ano_",""),
          valor = as.numeric(valor))
 
@@ -39,7 +39,7 @@ cst_empleo_excel <- readxl::read_excel(temp,skip = 7,sheet=3) %>%
          puestos_noreg = as.numeric(asalariados_no_registrados)) %>% 
   filter(!is.na(puestos_reg) & industrias_turisticas == "Total Industrias turísticas") %>% 
   select(industrias_turisticas,puestos_reg,puestos_noreg) %>% 
-  mutate(anio = c(2004,2016:2019)) 
+  mutate(anio = c(2004,2016:2022)) 
 
 empleo_cat <- cst_empleo_excel  %>% 
   select(anio,puestos_reg,puestos_noreg) %>% 

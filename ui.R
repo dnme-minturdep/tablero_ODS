@@ -45,13 +45,13 @@ tagList(dashboardPage(
                 ,
                 fluidRow(
                     valueBox(tags$p(style = "font-size: 160%;", cst_empleo),
-                             tags$p(style = "font-size: 140%;", "Puestos de trabajo en industrias turísticas (2019)"),
+                             tags$p(style = "font-size: 140%;", "Puestos de trabajo en industrias turísticas (2022)"),
                                     icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", empleo_informal),
-                             tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo turístico (2019)"),
+                             tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo turístico (2022)"),
                              icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", cst_pibdt),
-                             tags$p(style = "font-size: 140%;", "PIB turístico respecto del PIB total (2019)"), 
+                             tags$p(style = "font-size: 140%;", "PIB turístico respecto del PIB total (2022)"), 
                              icon = icon("", verify_fa = FALSE), width = 4, color = "navy")),
                 fluidRow(
                     h4( tags$b("Acceso al turismo y desigualdad"))),
@@ -111,7 +111,7 @@ tagList(dashboardPage(
                              tags$p(style = "font-size=14px","Los indicadores que reflejan el aporte del turismo a la economía en su conjunto en términos de actividad 
                                 económica y empleo, y la tasa de informalidad de éste, provienen de la ",
                                 tags$a(href="https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo", target = '_blank', "Cuenta Satélite de Turismo de Argentina (CST-A)"), 
-                                ", publicada en febrero de 2022. El resto de los indicadores, que buscan medir el acceso al turismo y su nivel de desigualdad,
+                                . El resto de los indicadores, que buscan medir el acceso al turismo y su nivel de desigualdad,
                                 toman como fuente de los datos a la ",
                                 tags$a(href="https://www.yvera.tur.ar/sinta/informe/info/encuesta-de-viajes-y-turismo-de-los-hogares-evyth", target = '_blank', "Encuesta de Viajes y Turismo de los Hogares (EVyTH)"),
                                 ", representativa de los grandes aglomerados del país."),
