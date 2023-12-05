@@ -48,7 +48,7 @@ tagList(dashboardPage(
                              tags$p(style = "font-size: 140%;", "Puestos de trabajo en industrias turísticas (2022)"),
                                     icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", empleo_informal),
-                             tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo turístico (2022)"),
+                             tags$p(style = "font-size: 140%;", "Tasa de informalidad del empleo asalariado turístico (2022)"),
                              icon = icon("", verify_fa = FALSE), width = 4, color = "navy"),
                     valueBox(tags$p(style = "font-size: 160%;", cst_pibdt),
                              tags$p(style = "font-size: 140%;", "PIB turístico respecto del PIB total (2022)"), 
@@ -83,7 +83,7 @@ tagList(dashboardPage(
                     box(width = 4, status = "primary", solidHeader = TRUE,
                                       title = "Puestos de trabajo en industrias turísticas (millones)", plotlyOutput("graph_cst_empleo", height = 200)),
                     box(width = 4, status = "primary", solidHeader = TRUE,
-                                      title = "Tasa de informalidad del empleo turístico (%)", plotlyOutput("informalidad_empleo", height = 200)),
+                                      title = "Tasa de informalidad del empleo asalariado turístico (%)", plotlyOutput("informalidad_empleo", height = 200)),
                     box(width = 4, status = "primary", solidHeader = TRUE,
                         title = "PIB directo turístico respecto del PIB total (%)", plotlyOutput("graph_pibdt", height = 200))
                 ),
@@ -121,7 +121,7 @@ tagList(dashboardPage(
                                                ": Surge de la suma de los puestos de trabajo existentes en
                                                los establecimientos pertenecientes a las ramas de actividad clasificadas como características del turismo. 
                                                Incluye puestos de trabajo asalariados (registrados y no registrados) y no asalariados."),
-                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • Tasa de informalidad en el empleo turístico"),": Proporción de puestos de trabajo asalariados no registrados
+                                        tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • Tasa de informalidad en el empleo asalariado turístico"),": Proporción de puestos de trabajo asalariados no registrados
                                                con respecto al total de puestos de trabajo asalariados, en porcentaje, para ramas características del turismo."),
                                         tags$p(style = "font-size=14px",tags$b(style = "font-size=14px"," • PIB turístico respecto del PIB total"),": la parte del PIB de la economía total atribuible directamente
                                         al consumo turístico realizado dentro de la Argentina, ya sea por visitantes residentes o no residentes, como porcentaje del PIB total."),
