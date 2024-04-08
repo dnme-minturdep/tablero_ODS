@@ -59,7 +59,7 @@ cst_pibdt <- paste0(cst %>%
   pull(valor) %>% 
   format(decimal.mark=","),"%")
 
-comptur <- read_file_srv("/srv/DataDNMYE/evyth/comportamiento_turistico/EVyTH_BASE USUARIO_COMPTUR2006-10-11a22_PERSONAS.sav") 
+comptur <- read_file_srv("/srv/DataDNMYE/evyth/UNISTAT/envios_consultoras/bases/2023/comportamiento_turistico/EVyTH_BASE USUARIO_COMPTUR2006-10-11a22_PERSONAS.sav") 
 
 
 #Proporción de la población que al menos realizó un viaje en el año
