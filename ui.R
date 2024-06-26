@@ -24,6 +24,9 @@ tagList(dashboardPage(
         ),
     
     dashboardBody(
+        
+        tags$head(includeHTML("/srv/DataDNMYE/login_shiny/ods.html")),
+        
         useWaiter(),
         #waiter_show_on_load(html = loading_screen, color = "white"),
         useShinyjs(),
