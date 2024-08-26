@@ -104,12 +104,12 @@ tagList(dashboardPage(
                          
                         box(width = NULL,status = "primary", solidHeader = TRUE,
                              br(),
-                            tags$b(style ="text-align: center; font-size: 20px;color:#37BBED;",'Definiciones y conceptos'),
+                            tags$b(style ="text-align: center; font-size: 20px;color:#252C4F;",'Definiciones y conceptos'),
                              br(),
                              tags$p(style = "font-size=14px","El tablero presenta un conjunto de indicadores que buscan reflejar el aporte del 
                                 turismo a los Objetivos de Desarrollo Sostenible (ODS) para nuestro país. El Documento de Trabajo 
                                 N°12: El turismo en los Objetivos de Desarrollo Sostenible aborda esta propuesta y describe en detalle las fuentas utilizadas y los indicadores elaborados"), 
-                            tags$b(style = "font-size=14px", style ="text-align: center; font-size: 20px;color:#37BBED;",'Fuentes de información'),
+                            tags$b(style = "font-size=14px", style ="text-align: center; font-size: 20px;color:#252C4F;",'Fuentes de información'),
                              br(),
                              tags$p(style = "font-size=14px","Los indicadores que reflejan el aporte del turismo a la economía en su conjunto en términos de actividad 
                                 económica y empleo, y la tasa de informalidad de éste, provienen de la ",
@@ -118,7 +118,7 @@ tagList(dashboardPage(
                                 toman como fuente de los datos a la ",
                                 tags$a(href="https://www.yvera.tur.ar/sinta/informe/info/encuesta-de-viajes-y-turismo-de-los-hogares-evyth", target = '_blank', "Encuesta de Viajes y Turismo de los Hogares (EVyTH)"),
                                 ", representativa de los grandes aglomerados del país."),
-                            tags$b(style ="text-align: center; font-size: 20px;color:#37BBED;",'Indicadores'),
+                            tags$b(style ="text-align: center; font-size: 20px;color:#252C4F;",'Indicadores'),
                              br(),
                              tags$p(style = "font-size=14px",tags$ul(tags$p(tags$b(" • Puestos de trabajo en industrias turísticas"),style = "font-size=14px",
                                                ": Surge de la suma de los puestos de trabajo existentes en
